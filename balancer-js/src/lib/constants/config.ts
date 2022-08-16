@@ -4,7 +4,24 @@ import { BalancerNetworkConfig } from '@/types';
 export const balancerVault = '0x20dd72Ed959b6147912C2e529F0a0C651c33c9ce';
 
 export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
-    [Network.MAINNET]: {
+  [Network.BAOBAB]: {
+    chainId: Network.BAOBAB, //1001
+    addresses: {
+      contracts: {
+        vault: '0x42bD72338dd0A2a32D55c0662456A4505515C85D',
+        multicall: '0xa1e7c514aed820ccd0ab82297496b5632477ecdf',
+      },
+      tokens: {
+        wrappedNativeAsset: '0xA5244Bf7C2708FfF3b54501f5ef4DC81a9551097'
+      },
+    },
+    urls: {
+      subgraph:
+        'https://graph.klex.finance/subgraphs/name/klex-2',
+    },
+    pools: {},
+  },  
+  [Network.MAINNET]: {
         chainId: Network.MAINNET, //1
         addresses: {
             contracts: {
