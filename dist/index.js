@@ -772,6 +772,7 @@ exports.Network = void 0;
     Network[Network["KOVAN"] = 42] = "KOVAN";
     Network[Network["POLYGON"] = 137] = "POLYGON";
     Network[Network["ARBITRUM"] = 42161] = "ARBITRUM";
+    Network[Network["BAOBAB"] = 1001] = "BAOBAB";
 })(exports.Network || (exports.Network = {}));
 
 /*
@@ -870,6 +871,22 @@ function batchSwaps(assetArray, swaps) {
 
 const balancerVault = '0x20dd72Ed959b6147912C2e529F0a0C651c33c9ce';
 const BALANCER_NETWORK_CONFIG = {
+    [exports.Network.BAOBAB]: {
+        chainId: exports.Network.BAOBAB,
+        addresses: {
+            contracts: {
+                vault: '0x42bD72338dd0A2a32D55c0662456A4505515C85D',
+                multicall: '0xa1e7c514aed820ccd0ab82297496b5632477ecdf',
+            },
+            tokens: {
+                wrappedNativeAsset: '0xA5244Bf7C2708FfF3b54501f5ef4DC81a9551097'
+            },
+        },
+        urls: {
+            subgraph: 'https://graph.klex.finance/subgraphs/name/klex-2',
+        },
+        pools: {},
+    },
     [exports.Network.MAINNET]: {
         chainId: exports.Network.MAINNET,
         addresses: {
@@ -7060,7 +7077,6 @@ const NETWORKS_WITH_LINEAR_POOLS = [
     exports.Network.RINKEBY,
     exports.Network.GÖRLI,
     exports.Network.KOVAN,
-    250,
 ];
 class SubgraphPoolDataService {
     constructor(client, provider, network, sorConfig) {
