@@ -857,7 +857,7 @@
         return { swaps: batchedSwaps, assets: newAssetArray };
     }
 
-    const balancerVault = '0x20dd72Ed959b6147912C2e529F0a0C651c33c9ce';
+    const balancerVault = '0xfd7851A07572bd0839fF8125bEEC9B91C0c6851b';
     const BALANCER_NETWORK_CONFIG = {
         [exports.Network.BAOBAB]: {
             chainId: exports.Network.BAOBAB,
@@ -867,7 +867,7 @@
                     multicall: '0xa1e7c514aed820ccd0ab82297496b5632477ecdf',
                 },
                 tokens: {
-                    wrappedNativeAsset: '0xA5244Bf7C2708FfF3b54501f5ef4DC81a9551097'
+                    wrappedNativeAsset: '0xA5244Bf7C2708FfF3b54501f5ef4DC81a9551097',
                 },
             },
             urls: {
