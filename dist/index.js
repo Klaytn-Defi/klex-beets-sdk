@@ -869,13 +869,13 @@ function batchSwaps(assetArray, swaps) {
     return { swaps: batchedSwaps, assets: newAssetArray };
 }
 
-const balancerVault = '0xfd7851A07572bd0839fF8125bEEC9B91C0c6851b';
+const balancerVault = '0x09875F2F064b217B7Ee396739dfB2e8016B66eF8';
 const BALANCER_NETWORK_CONFIG = {
     [exports.Network.BAOBAB]: {
         chainId: exports.Network.BAOBAB,
         addresses: {
             contracts: {
-                vault: '0x42bD72338dd0A2a32D55c0662456A4505515C85D',
+                vault: '0x09875F2F064b217B7Ee396739dfB2e8016B66eF8',
                 multicall: '0xa1e7c514aed820ccd0ab82297496b5632477ecdf',
             },
             tokens: {
@@ -883,7 +883,7 @@ const BALANCER_NETWORK_CONFIG = {
             },
         },
         urls: {
-            subgraph: 'https://graph.klex.finance/subgraphs/name/klex-2',
+            subgraph: 'https://graph.klex.finance/subgraphs/name/klex-internal-staging',
         },
         pools: {},
     },

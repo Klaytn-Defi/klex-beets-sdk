@@ -1,14 +1,14 @@
 import { Network } from './network';
 import { BalancerNetworkConfig } from '@/types';
 
-export const balancerVault = '0xfd7851A07572bd0839fF8125bEEC9B91C0c6851b';
+export const balancerVault = '0x09875F2F064b217B7Ee396739dfB2e8016B66eF8';
 
 export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
     [Network.BAOBAB]: {
         chainId: Network.BAOBAB, //1001
         addresses: {
             contracts: {
-                vault: '0x42bD72338dd0A2a32D55c0662456A4505515C85D',
+                vault: '0x09875F2F064b217B7Ee396739dfB2e8016B66eF8',
                 multicall: '0xa1e7c514aed820ccd0ab82297496b5632477ecdf',
             },
             tokens: {
@@ -17,7 +17,8 @@ export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
             },
         },
         urls: {
-            subgraph: 'https://graph.klex.finance/subgraphs/name/klex-2',
+            subgraph:
+                'https://graph.klex.finance/subgraphs/name/klex-internal-staging',
         },
         pools: {},
     },
