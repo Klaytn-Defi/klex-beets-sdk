@@ -1,9 +1,27 @@
 import { Network } from './network';
 import { BalancerNetworkConfig } from '@/types';
 
-export const balancerVault = '0x09875F2F064b217B7Ee396739dfB2e8016B66eF8';
+export const balancerVault = '0xb519Cf56C63F013B0320E89e1004A8DE8139dA27';
 
 export const BALANCER_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
+    [Network.CYPRESS]: {
+        chainId: Network.CYPRESS, //8217
+        addresses: {
+            contracts: {
+                vault: '0xb519Cf56C63F013B0320E89e1004A8DE8139dA27',
+                multicall: '0xc43451a79b7828a2c842ff6fa98ab904eff7d431',
+            },
+            tokens: {
+                wrappedNativeAsset:
+                    '0xe4f05a66ec68b54a58b17c22107b02e0232cc817',
+            },
+        },
+        urls: {
+            subgraph:
+                'https://graph-prod.klex.finance/subgraphs/name/klex-staging-mainnet',
+        },
+        pools: {},
+    },
     [Network.BAOBAB]: {
         chainId: Network.BAOBAB, //1001
         addresses: {

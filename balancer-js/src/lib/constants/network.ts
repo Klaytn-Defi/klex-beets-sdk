@@ -6,5 +6,6 @@ export enum Network {
     KOVAN = 42,
     POLYGON = 137,
     ARBITRUM = 42161,
-    BAOBAB = 1001
+    BAOBAB = 1001,
+    CYPRESS = 8217,
 }
