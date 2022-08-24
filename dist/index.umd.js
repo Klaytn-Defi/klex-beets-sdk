@@ -761,6 +761,7 @@
         Network[Network["POLYGON"] = 137] = "POLYGON";
         Network[Network["ARBITRUM"] = 42161] = "ARBITRUM";
         Network[Network["BAOBAB"] = 1001] = "BAOBAB";
+        Network[Network["CYPRESS"] = 8217] = "CYPRESS";
     })(exports.Network || (exports.Network = {}));
 
     /*
@@ -859,6 +860,22 @@
 
     const balancerVault = '0x09875F2F064b217B7Ee396739dfB2e8016B66eF8';
     const BALANCER_NETWORK_CONFIG = {
+        [exports.Network.CYPRESS]: {
+            chainId: exports.Network.CYPRESS,
+            addresses: {
+                contracts: {
+                    vault: '0xb519Cf56C63F013B0320E89e1004A8DE8139dA27',
+                    multicall: '0xc43451a79b7828a2c842ff6fa98ab904eff7d431',
+                },
+                tokens: {
+                    wrappedNativeAsset: '0xe4f05a66ec68b54a58b17c22107b02e0232cc817',
+                },
+            },
+            urls: {
+                subgraph: 'https://graph-prod.klex.finance/subgraphs/name/klex-staging-mainnet',
+            },
+            pools: {},
+        },
         [exports.Network.BAOBAB]: {
             chainId: exports.Network.BAOBAB,
             addresses: {
