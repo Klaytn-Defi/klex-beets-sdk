@@ -8759,11 +8759,11 @@ class Relayer {
     }
     get linearPoolMap() {
         const pools = this.getPools();
-        return keyBy(pools.filter((pool) => pool.poolType === 'Linear'), 'address');
+        return keyBy(pools.filter((pool) => pool.poolType === 'Linear' || pool.poolType === 'AaveLinear'), 'address');
     }
     get linearPoolWrappedTokenMap() {
         const pools = this.getPools();
-        return keyBy(pools.filter((pool) => pool.poolType === 'Linear'), (pool) => pool.tokensList[pool.wrappedIndex || 0]);
+        return keyBy(pools.filter((pool) => pool.poolType === 'Linear' || pool.poolType === 'AaveLinear'), (pool) => pool.tokensList[pool.wrappedIndex || 0]);
     }
     get stablePhantomMap() {
         const pools = this.getPools();
