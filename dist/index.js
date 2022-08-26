@@ -8766,11 +8766,11 @@ class Relayer {
     }
     get linearPoolMap() {
         const pools = this.getPools();
-        return lodash.keyBy(pools.filter((pool) => pool.poolType === 'Linear'), 'address');
+        return lodash.keyBy(pools.filter((pool) => pool.poolType === 'AaveLinear' || pool.poolType === 'Linear'), 'address');
     }
     get linearPoolWrappedTokenMap() {
         const pools = this.getPools();
-        return lodash.keyBy(pools.filter((pool) => pool.poolType === 'Linear'), (pool) => pool.tokensList[pool.wrappedIndex || 0]);
+        return lodash.keyBy(pools.filter((pool) => pool.poolType === 'AaveLinear' || pool.poolType === 'Linear'), (pool) => pool.tokensList[pool.wrappedIndex || 0]);
     }
     get stablePhantomMap() {
         const pools = this.getPools();

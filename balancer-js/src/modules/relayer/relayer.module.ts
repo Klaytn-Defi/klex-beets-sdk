@@ -101,7 +101,10 @@ export class Relayer {
         const pools = this.getPools();
 
         return keyBy(
-            pools.filter((pool) => pool.poolType === 'Linear'),
+            pools.filter(
+                (pool) =>
+                    pool.poolType === 'AaveLinear' || pool.poolType === 'Linear'
+            ),
             'address'
         );
     }
@@ -112,7 +115,10 @@ export class Relayer {
         const pools = this.getPools();
 
         return keyBy(
-            pools.filter((pool) => pool.poolType === 'Linear'),
+            pools.filter(
+                (pool) =>
+                    pool.poolType === 'AaveLinear' || pool.poolType === 'Linear'
+            ),
             (pool) => pool.tokensList[pool.wrappedIndex || 0]
         );
     }
